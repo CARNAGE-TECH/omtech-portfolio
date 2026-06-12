@@ -12,7 +12,7 @@ export default function About() {
           </span>
         </h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+        <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
           <div>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px', lineHeight: 1.8, marginBottom: '1.5rem' }}>
               I'm Joseph Omokwale, a freelance web developer and designer based in Edo, Nigeria. I build modern, responsive web applications using React and JavaScript.
@@ -29,7 +29,7 @@ export default function About() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+          <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
             {[
               ['3+', 'Years coding'],
               ['Full-Stack', 'React developer'],
