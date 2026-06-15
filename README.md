@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# OMTECH INNOVATORS — Developer Portfolio 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> The official portfolio website of Joseph Omokwale, freelance web developer and designer at OMTECH INNOVATORS — featuring live projects, skills, an animated particle network background, and a working contact form.
 
-## Available Scripts
+**Live Site:** [omtech-portfolio.vercel.app](https://omtech-portfolio.vercel.app)
+**GitHub:** [github.com/CARNAGE-TECH/omtech-portfolio](https://github.com/CARNAGE-TECH/omtech-portfolio)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This portfolio was designed and built from scratch to represent OMTECH INNOVATORS professionally online. It features a custom canvas-based particle network animation in the background, smooth scroll-triggered entrance animations on every section, a fully working EmailJS contact form, WhatsApp and Instagram integration, and a mobile-first responsive layout.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Sections
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Hero
+- Bold animated headline
+- "Available for freelance work" badge
+- CTA buttons linking to projects and contact sections
+- Direct GitHub link
 
-### `npm run build`
+### About
+- Personal bio and developer background
+- Tech stack badge display
+- Key stats: years of experience, role, passion, location
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Projects
+- Four featured project cards: OMTECH Chat, FitTrack, WeatherNow, Phoenix
+- Live demo and GitHub links per project
+- Tech stack tags per project
+- Color-coded accent bars
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Skills
+- Grouped by category: Languages, Frameworks & Libraries, APIs & Tools, Dev Tools
+- Icon-based skill group cards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Contact
+- Fully working contact form via **EmailJS** (sends directly to inbox)
+- WhatsApp direct message link
+- Instagram profile link
+- Email and location display
 
-### `npm run eject`
+### Footer
+- OMTECH INNOVATORS branding
+- Copyright notice
+- GitHub profile link
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Special Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Particle Network Background
+- Custom built with HTML5 Canvas — no third-party particle library
+- Floating particles connected by dynamic lines
+- Interactive: particles connect to your mouse cursor on hover
+- Fully responsive and performance optimized
+- Runs at 60fps with no impact on scroll performance
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Scroll Animations
+- Every section animates in as it enters the viewport
+- Powered by Framer Motion's `whileInView` with `viewport={{ once: true }}`
+- Smooth fade-up entrance on all content blocks
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Technology | Purpose |
+|---|---|
+| React | Frontend framework |
+| Framer Motion | Scroll animations and transitions |
+| React Icons | Icon library |
+| EmailJS | Contact form without a backend |
+| HTML5 Canvas | Custom particle network animation |
+| CSS (inline styles) | Responsive styling |
+| Vercel | Deployment |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Getting Started
 
-### Analyzing the Bundle Size
+### Prerequisites
+- Node.js v16+
+- npm
+- Free EmailJS account at [emailjs.com](https://emailjs.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installation
 
-### Making a Progressive Web App
+```bash
+git clone https://github.com/CARNAGE-TECH/omtech-portfolio.git
+cd omtech-portfolio
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### EmailJS Configuration
+In `src/components/Contact.jsx` replace:
+```js
+const SERVICE_ID = 'your_service_id';
+const TEMPLATE_ID = 'your_template_id';
+const PUBLIC_KEY = 'your_public_key';
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Project Structure
 
-### Deployment
+src/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+├── assets/
 
-### `npm run build` fails to minify
+│   └── logo.jpeg                # OMTECH INNOVATORS brand logo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+├── components/
+
+│   ├── Particles.jsx            # Custom canvas particle network
+
+│   ├── Navbar.jsx               # Sticky navbar with mobile hamburger menu
+
+│   ├── Hero.jsx                 # Landing hero section
+
+│   ├── About.jsx                # Bio, stats, and tech badges
+
+│   ├── Projects.jsx             # Portfolio project cards
+
+│   ├── Skills.jsx               # Skills grouped by category
+
+│   ├── Contact.jsx              # EmailJS contact form + social links
+
+│   └── Footer.jsx               # Branded footer
+
+└── App.js                       # Root component and layout
+
+---
+
+## Roadmap
+
+- [ ] Blog section for tech articles
+- [ ] Individual case study pages per project
+- [ ] Client testimonials section
+- [ ] CV/Resume download button
+- [ ] Light mode toggle
+
+---
+
+## Contact
+
+**Joseph Omokwale**
+📍 Edo State, Nigeria
+📧 omtechinnovators@gmail.com
+📱 WhatsApp: [+234 807 638 4453](https://wa.me/2348076384453)
+📸 Instagram: [@omtechinnovators](https://instagram.com/omtechinnovators)
+🌐 [omtech-portfolio.vercel.app](https://omtech-portfolio.vercel.app)
+
+---
+
+## License
+MIT License
