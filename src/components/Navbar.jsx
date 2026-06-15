@@ -28,11 +28,11 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
           position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
           background: scrolled ? 'rgba(10,10,10,0.95)' : 'transparent',
           backdropFilter: scrolled ? 'blur(12px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
+          borderBottomColor: scrolled ? 'rgba(255,255,255,0.08)' : 'transparent',
           padding: '0 2rem', height: '70px',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          transition: 'background 0.3s, border 0.3s'
-        }}>
+          transition: 'background 0.3s, border-color 0.3s',        }}>
         <img src={logo} alt="OMTECH INNOVATORS" style={{ height: '40px', objectFit: 'contain', borderRadius: '8px' }} />
         {/* Desktop links */}
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
