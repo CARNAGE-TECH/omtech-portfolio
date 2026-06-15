@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ParticleBackground from './components/Particles';
 
 const scrollStyles = `
   html { scroll-behavior: smooth; }
@@ -26,7 +27,8 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div style={{ fontFamily: "'Segoe UI', Arial, sans-serif", background: '#0a0a0a', color: 'white', overflowX: 'hidden' }}>
+    <div style={{ fontFamily: "'Segoe UI', Arial, sans-serif", background: '#0a0a0a', color: 'white', overflowX: 'hidden', position: 'relative' }}>
+  <ParticleBackground />
       <style>{scrollStyles}</style>
       <style>{mobileStyles}</style>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

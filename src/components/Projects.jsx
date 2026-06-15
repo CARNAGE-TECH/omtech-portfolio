@@ -3,6 +3,14 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 const projects = [
   {
+    title: 'OMTECH Chat',
+    description: 'A real-time full-stack chat application with public rooms, shareable room codes, direct messaging, image/file uploads via Cloudinary, emoji picker, GIF search, typing indicators, and a full settings panel with dark/light mode.',
+    tags: ['React', 'Firebase', 'Firestore', 'Cloudinary', 'Framer Motion'],
+    live: 'https://omtech-chat.vercel.app',
+    github: 'https://github.com/CARNAGE-TECH/omtech-chat',
+    color: '#185FA5'
+  },
+  {
     title: 'FitTrack',
     description: 'A full-featured fitness tracking app for logging workouts across 4 splits, tracking macros with the USDA FoodData Central API, and monitoring progress over time.',
     tags: ['React', 'USDA API', 'localStorage', 'CSS'],
@@ -30,8 +38,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" style={{ padding: '6rem 2rem', background: 'rgba(255,255,255,0.02)' }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+<section id="projects" style={{ padding: '6rem 2rem', background: 'rgba(255,255,255,0.02)', position: 'relative', zIndex: 1 }}>      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <div style={{ fontSize: '13px', color: '#90cdf4', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Portfolio</div>
           <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: '800', letterSpacing: '-1px', marginBottom: '3rem', lineHeight: 1.2 }}>
