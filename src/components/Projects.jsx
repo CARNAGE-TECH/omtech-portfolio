@@ -3,12 +3,20 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 const projects = [
   {
-    title: 'OMTECH Chat',
-    description: 'A real-time full-stack chat application with public rooms, shareable room codes, direct messaging, image/file uploads via Cloudinary, emoji picker, GIF search, typing indicators, and a full settings panel with dark/light mode.',
-    tags: ['React', 'Firebase', 'Firestore', 'Cloudinary', 'Framer Motion'],
-    live: 'https://omtech-chat.vercel.app',
-    github: 'https://github.com/CARNAGE-TECH/omtech-chat',
-    color: '#185FA5'
+    title: 'LUMINA',
+    description: 'A premium luxury fashion e-commerce website inspired by brands like COS and Massimo Dutti. Features a hero carousel, product collections, cart, wishlist, Firebase auth, and a fully responsive editorial design.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Framer Motion'],
+    live: 'https://lumina-chi-ruddy.vercel.app/',
+    github: 'https://github.com/CARNAGE-TECH/Lumina',
+    color: '#6D28D9'
+  },
+  {
+    title: 'Phoenix — Solar System',
+    description: 'A group capstone project — an interactive solar system data app with planet cards, a NASA data table, video section, and contact form.',
+    tags: ['React', 'CSS', 'Vercel', 'Team Project'],
+    live: 'https://capstone-project-group-14.vercel.app/',
+    github: 'https://github.com/CARNAGE-TECH',
+    color: '#6D28D9'
   },
   {
     title: 'FitTrack',
@@ -19,22 +27,22 @@ const projects = [
     color: '#185FA5'
   },
   {
+    title: 'OMTECH Chat',
+    description: 'A real-time full-stack chat application with public rooms, shareable room codes, direct messaging, image/file uploads via Cloudinary, emoji picker, GIF search, typing indicators, and a full settings panel with dark/light mode.',
+    tags: ['React', 'Firebase', 'Firestore', 'Cloudinary', 'Framer Motion'],
+    live: 'https://omtech-chat.vercel.app/',
+    github: 'https://github.com/CARNAGE-TECH/omtech-chat',
+    color: '#185FA5'
+  },
+  {
     title: 'WeatherNow',
     description: 'A real-time weather app with animated backgrounds for each weather condition, city search with autocomplete, air quality index, 5-day forecast, and favourites.',
     tags: ['React', 'OpenWeatherMap API', 'Framer Motion', 'React Icons'],
     live: 'https://weatherapp-5got.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/weatherapp',
-    color: '#0d6ebd'
-  },
-  {
-    title: 'Phoenix — Solar System',
-    description: 'A group capstone project — an interactive solar system data app with planet cards, a NASA data table, video section, and contact form.',
-    tags: ['React', 'CSS', 'Vercel', 'Team Project'],
-    live: 'https://capstone-project-group-14.vercel.app/',
-    github: 'https://github.com/CARNAGE-TECH',
-    color: '#6D28D9'
+    color: '#0d30bd'
   }
-];
+]; 
 
 export default function Projects() {
   return (
