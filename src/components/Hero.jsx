@@ -21,15 +21,15 @@ export default function Hero() {
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
           style={{ fontSize: 'clamp(36px, 7vw, 72px)', fontWeight: '800', lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-2px' }}>
-          Building digital experiences that{' '}
+          Building websites and apps for{' '}
           <span style={{ background: 'linear-gradient(135deg, #185FA5, #63b3ed)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            matter
+            growing brands
           </span>
         </motion.h1>
 
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
           style={{ fontSize: '18px', color: 'rgba(255,255,255,0.6)', maxWidth: '540px', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
-          I'm Joseph, a freelance web developer and designer at OMTECH INNOVATORS. I build modern, responsive web applications that solve real problems.
+          I'm Joseph, a freelance web developer and designer at OMTECH INNOVATORS. I help small businesses, startups, and creators launch fast, responsive digital products that look sharp and work smoothly.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}

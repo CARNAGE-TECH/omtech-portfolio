@@ -2,7 +2,9 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Services from './components/Services';
 import Projects from './components/Projects';
+import Testimonials from './components/Testimonials';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -15,7 +17,9 @@ const scrollStyles = `
 const mobileStyles = `
   @media (max-width: 640px) {
     .about-grid { grid-template-columns: 1fr !important; }
+    .services-grid { grid-template-columns: 1fr !important; }
     .projects-grid { grid-template-columns: 1fr !important; }
+    .testimonials-grid { grid-template-columns: 1fr !important; }
     .skills-grid { grid-template-columns: 1fr !important; }
     .contact-grid { grid-template-columns: 1fr !important; }
     .nav-desktop { display: none !important; }
@@ -33,7 +37,9 @@ function App() {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
       <About />
+      <Services />
       <Projects />
+      <Testimonials />
       <Skills />
       <Contact />
       <Footer />

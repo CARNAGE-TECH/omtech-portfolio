@@ -1,6 +1,6 @@
-# OMTECH INNOVATORS — Developer Portfolio 🚀
+# OMTECH INNOVATORS - Developer Portfolio
 
-> The official portfolio website of Joseph Omokwale, freelance web developer and designer at OMTECH INNOVATORS — featuring live projects, skills, an animated particle network background, and a working contact form.
+> The official portfolio website of Joseph Omokwale, freelance web developer and designer at OMTECH INNOVATORS - featuring live projects, skills, an animated particle network background, and a working contact form.
 
 **Live Site:** [omtech-portfolio.vercel.app](https://omtech-portfolio.vercel.app)
 **GitHub:** [github.com/CARNAGE-TECH/omtech-portfolio](https://github.com/CARNAGE-TECH/omtech-portfolio)
@@ -16,7 +16,7 @@ This portfolio was designed and built from scratch to represent OMTECH INNOVATOR
 ## Sections
 
 ### Hero
-- Bold animated headline
+- Specific headline for websites and apps built for growing brands
 - "Available for freelance work" badge
 - CTA buttons linking to projects and contact sections
 - Direct GitHub link
@@ -27,7 +27,7 @@ This portfolio was designed and built from scratch to represent OMTECH INNOVATOR
 - Key stats: years of experience, role, passion, location
 
 ### Projects
-- Four featured project cards: OMTECH Chat, FitTrack, WeatherNow, Phoenix
+- Five featured project cards: LUMINA, Phoenix, FitTrack, OMTECH Chat, WeatherNow
 - Live demo and GitHub links per project
 - Tech stack tags per project
 - Color-coded accent bars
@@ -52,7 +52,7 @@ This portfolio was designed and built from scratch to represent OMTECH INNOVATOR
 ## Special Features
 
 ### Particle Network Background
-- Custom built with HTML5 Canvas — no third-party particle library
+- Custom built with HTML5 Canvas - no third-party particle library
 - Floating particles connected by dynamic lines
 - Interactive: particles connect to your mouse cursor on hover
 - Fully responsive and performance optimized
@@ -107,31 +107,21 @@ const PUBLIC_KEY = 'your_public_key';
 
 ## Project Structure
 
+```text
 src/
-
-├── assets/
-
-│   └── logo.jpeg                # OMTECH INNOVATORS brand logo
-
-├── components/
-
-│   ├── Particles.jsx            # Custom canvas particle network
-
-│   ├── Navbar.jsx               # Sticky navbar with mobile hamburger menu
-
-│   ├── Hero.jsx                 # Landing hero section
-
-│   ├── About.jsx                # Bio, stats, and tech badges
-
-│   ├── Projects.jsx             # Portfolio project cards
-
-│   ├── Skills.jsx               # Skills grouped by category
-
-│   ├── Contact.jsx              # EmailJS contact form + social links
-
-│   └── Footer.jsx               # Branded footer
-
-└── App.js                       # Root component and layout
+|-- assets/
+|   `-- logo.jpeg                # OMTECH INNOVATORS brand logo
+|-- components/
+|   |-- Particles.jsx            # Custom canvas particle network
+|   |-- Navbar.jsx               # Sticky navbar with mobile hamburger menu
+|   |-- Hero.jsx                 # Landing hero section
+|   |-- About.jsx                # Bio, stats, and tech badges
+|   |-- Projects.jsx             # Portfolio project cards
+|   |-- Skills.jsx               # Skills grouped by category
+|   |-- Contact.jsx              # EmailJS contact form + social links
+|   `-- Footer.jsx               # Branded footer
+`-- App.js                       # Root component and layout
+```
 
 ---
 
@@ -148,11 +138,12 @@ src/
 ## Contact
 
 **Joseph Omokwale**
-📍 Edo State, Nigeria
-📧 omtechinnovators@gmail.com
-📱 WhatsApp: [+234 807 638 4453](https://wa.me/2348076384453)
-📸 Instagram: [@omtechinnovators](https://instagram.com/omtechinnovators)
-🌐 [omtech-portfolio.vercel.app](https://omtech-portfolio.vercel.app)
+
+Location: Edo State, Nigeria
+Email: omtechinnovators@gmail.com
+WhatsApp: [+234 807 638 4453](https://wa.me/2348076384453)
+Instagram: [@omtechinnovators](https://instagram.com/omtechinnovators)
+Website: [omtech-portfolio.vercel.app](https://omtech-portfolio.vercel.app)
 
 ---
 

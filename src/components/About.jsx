@@ -17,7 +17,7 @@ export default function About() {
               I'm Joseph Omokwale, a freelance web developer and designer based in Edo, Nigeria. I build modern, responsive web applications using React and JavaScript.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '16px', lineHeight: 1.8, marginBottom: '2rem' }}>
-              Under my brand OMTECH INNOVATORS, I focus on delivering clean, functional, and visually impressive digital products. My goal is simple — build things that work, look great, and solve real problems.
+              Under my brand OMTECH INNOVATORS, I focus on delivering clean, functional, and visually impressive digital products. My goal is simple: build things that work, look great, and solve real problems.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               {['React', 'JavaScript', 'HTML/CSS', 'Git', 'Vercel', 'REST APIs'].map(tech => (

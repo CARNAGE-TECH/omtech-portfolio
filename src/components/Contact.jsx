@@ -9,23 +9,24 @@ const TEMPLATE_ID = 'template_rgh9xek';
 const PUBLIC_KEY = 'LEYnxJ6tgDY5Mt-kU';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', projectType: '', message: '' });
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
 
   const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.message) { setError('Please fill in all fields.'); return; }
+    if (!form.name || !form.email || !form.projectType || !form.message) { setError('Please fill in all fields.'); return; }
     setError('');
     setSending(true);
     try {
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
         from_name: form.name,
         from_email: form.email,
+        project_type: form.projectType,
         message: form.message
       }, PUBLIC_KEY);
       setSent(true);
-      setForm({ name: '', email: '', message: '' });
+      setForm({ name: '', email: '', projectType: '', message: '' });
       setTimeout(() => setSent(false), 5000);
     } catch {
       setError('Failed to send. Please try WhatsApp or email directly.');
@@ -52,7 +53,7 @@ export default function Contact() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '3rem', alignItems: 'start' }}>
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '16px', lineHeight: 1.8, marginBottom: '2rem' }}>
-              I'm currently available for freelance projects. Whether you need a website, web app, or UI design — let's talk.
+              I'm currently available for freelance projects. Whether you need a website, web app, e-commerce build, or UI polish, let's talk.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'rgba(255,255,255,0.65)', fontSize: '15px' }}>
@@ -91,6 +92,21 @@ export default function Contact() {
                   placeholder="you@email.com" style={inputStyle}
                   onFocus={e => e.target.style.borderColor = 'rgba(24,95,165,0.6)'}
                   onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} />
+              </div>
+              <div>
+                <label style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', display: 'block', marginBottom: '6px', fontWeight: '500' }}>Project type</label>
+                <select value={form.projectType} onChange={e => setForm({ ...form, projectType: e.target.value })}
+                  style={{ ...inputStyle, color: form.projectType ? 'white' : 'rgba(255,255,255,0.45)' }}
+                  onFocus={e => e.target.style.borderColor = 'rgba(24,95,165,0.6)'}
+                  onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}>
+                  <option value="" style={{ background: '#111827', color: 'rgba(255,255,255,0.65)' }}>Choose a project type</option>
+                  <option value="Business Website" style={{ background: '#111827', color: 'white' }}>Business Website</option>
+                  <option value="Web Application" style={{ background: '#111827', color: 'white' }}>Web Application</option>
+                  <option value="E-commerce" style={{ background: '#111827', color: 'white' }}>E-commerce</option>
+                  <option value="UI Polish or Redesign" style={{ background: '#111827', color: 'white' }}>UI Polish or Redesign</option>
+                  <option value="Bug Fix or Feature" style={{ background: '#111827', color: 'white' }}>Bug Fix or Feature</option>
+                  <option value="Other" style={{ background: '#111827', color: 'white' }}>Other</option>
+                </select>
               </div>
               <div>
                 <label style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', display: 'block', marginBottom: '6px', fontWeight: '500' }}>Message</label>

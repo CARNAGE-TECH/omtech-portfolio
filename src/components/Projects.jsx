@@ -8,15 +8,17 @@ const projects = [
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Framer Motion'],
     live: 'https://lumina-chi-ruddy.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/Lumina',
-    color: '#6D28D9'
+    color: '#6D28D9',
+    image: '/project-screenshots/lumina.png'
   },
   {
-    title: 'Phoenix — Solar System',
-    description: 'A group capstone project — an interactive solar system data app with planet cards, a NASA data table, video section, and contact form.',
+    title: 'Phoenix - Solar System',
+    description: 'A group capstone project - an interactive solar system data app with planet cards, a NASA data table, video section, and contact form.',
     tags: ['React', 'CSS', 'Vercel', 'Team Project'],
     live: 'https://capstone-project-group-14.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH',
-    color: '#6D28D9'
+    color: '#6D28D9',
+    image: '/project-screenshots/phoenix.png'
   },
   {
     title: 'FitTrack',
@@ -24,7 +26,8 @@ const projects = [
     tags: ['React', 'USDA API', 'localStorage', 'CSS'],
     live: 'https://fittrack-nine-gamma.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/fittrack',
-    color: '#185FA5'
+    color: '#185FA5',
+    image: '/project-screenshots/fittrack.png'
   },
   {
     title: 'OMTECH Chat',
@@ -32,7 +35,8 @@ const projects = [
     tags: ['React', 'Firebase', 'Firestore', 'Cloudinary', 'Framer Motion'],
     live: 'https://omtech-chat.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/omtech-chat',
-    color: '#185FA5'
+    color: '#185FA5',
+    image: '/project-screenshots/omtech-chat.png'
   },
   {
     title: 'WeatherNow',
@@ -40,9 +44,31 @@ const projects = [
     tags: ['React', 'OpenWeatherMap API', 'Framer Motion', 'React Icons'],
     live: 'https://weatherapp-5got.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/weatherapp',
-    color: '#0d30bd'
+    color: '#0d30bd',
+    image: '/project-screenshots/weathernow.png'
   }
 ]; 
+
+function ProjectPreview({ project }) {
+  return (
+    <div style={{ padding: '1rem 1rem 0', background: `linear-gradient(135deg, ${project.color}33, rgba(255,255,255,0.02))` }}>
+      <div style={{ border: '1px solid rgba(255,255,255,0.12)', borderRadius: '12px 12px 0 0', overflow: 'hidden', background: '#0f1117', boxShadow: '0 18px 40px rgba(0,0,0,0.28)' }}>
+        <div style={{ height: '28px', display: 'flex', alignItems: 'center', gap: '6px', padding: '0 10px', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.05)' }}>
+          {[project.color, '#fbbf24', '#68d391'].map((dot, index) => (
+            <span key={`${project.title}-dot-${index}`} style={{ width: '8px', height: '8px', borderRadius: '50%', background: dot }} />
+          ))}
+          <span style={{ height: '8px', width: '45%', borderRadius: '99px', background: 'rgba(255,255,255,0.12)', marginLeft: '8px' }} />
+        </div>
+        <img
+          src={project.image}
+          alt={`${project.title} live website screenshot`}
+          loading="lazy"
+          style={{ display: 'block', width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', objectPosition: 'top center' }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function Projects() {
   return (
@@ -54,7 +80,7 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+        <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
           {projects.map((p, i) => (
             <motion.div key={p.title}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -62,6 +88,7 @@ export default function Projects() {
 
               {/* Color bar */}
               <div style={{ height: '4px', background: `linear-gradient(90deg, ${p.color}, transparent)` }} />
+              <ProjectPreview project={p} />
 
               <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '0.75rem', color: 'white' }}>{p.title}</h3>

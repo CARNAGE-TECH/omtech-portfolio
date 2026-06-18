@@ -11,7 +11,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = ['About', 'Projects', 'Skills', 'Contact'];
+  const links = ['About', 'Services', 'Projects', 'Skills', 'Contact'];
 
   const scrollTo = (id) => {
     document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
@@ -35,7 +35,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
           transition: 'background 0.3s, border-color 0.3s',        }}>
         <img src={logo} alt="OMTECH INNOVATORS" style={{ height: '40px', objectFit: 'contain', borderRadius: '8px' }} />
         {/* Desktop links */}
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+        <div className="desktop-links" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
           {links.map(link => (
             <button key={link} onClick={() => scrollTo(link)}
               style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.75)', fontSize: '14px', cursor: 'pointer', fontFamily: 'inherit', fontWeight: '500', transition: 'color 0.2s' }}
