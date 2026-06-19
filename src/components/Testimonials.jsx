@@ -26,7 +26,7 @@ export default function Testimonials() {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <div style={{ fontSize: '13px', color: '#90cdf4', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Proof</div>
           <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: '800', letterSpacing: '-1px', marginBottom: '1rem', lineHeight: 1.2 }}>
-            Why clients can trust the work
+            Why clients can trust OMTECH  
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '16px', lineHeight: 1.8, maxWidth: '620px', marginBottom: '3rem' }}>
             A simple snapshot of the standards behind each build: real demos, clean delivery, and easy communication.
