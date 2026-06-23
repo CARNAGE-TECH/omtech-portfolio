@@ -8,8 +8,17 @@ const projects = [
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Framer Motion'],
     live: 'https://lumina-chi-ruddy.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/Lumina',
-    color: '#6D28D9',
+    color: '#185FA5',
     image: '/project-screenshots/lumina.png'
+  },
+  {
+    title: 'LifeCare Hospital',
+    description: 'A premium, fully responsive hospital website with appointment booking, animated statistics, doctor profiles, testimonials carousel, emergency banner, patient resources, and a luxury medical aesthetic.',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'React Icons'],
+    live: 'https://lifecare-nine.vercel.app/',
+    github: 'https://github.com/CARNAGE-TECH/lifecare',
+    color: '#185FA5',
+    image: '/project-screenshots/lifecare.png'
   },
   {
     title: 'Phoenix - Solar System',
@@ -17,7 +26,7 @@ const projects = [
     tags: ['React', 'CSS', 'Vercel', 'Team Project'],
     live: 'https://capstone-project-group-14.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH',
-    color: '#6D28D9',
+    color: '#185FA5',
     image: '/project-screenshots/phoenix.png'
   },
   {
@@ -26,7 +35,7 @@ const projects = [
     tags: ['React', 'USDA API', 'localStorage', 'CSS'],
     live: 'https://fittrack-nine-gamma.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/fittrack',
-    color: '#185FA5',
+    color: '#0d30bd',
     image: '/project-screenshots/fittrack.png'
   },
   {
@@ -35,7 +44,7 @@ const projects = [
     tags: ['React', 'Firebase', 'Firestore', 'Cloudinary', 'Framer Motion'],
     live: 'https://omtech-chat.vercel.app/',
     github: 'https://github.com/CARNAGE-TECH/omtech-chat',
-    color: '#185FA5',
+    color: '#0d30bd',
     image: '/project-screenshots/omtech-chat.png'
   },
   {
@@ -47,7 +56,7 @@ const projects = [
     color: '#0d30bd',
     image: '/project-screenshots/weathernow.png'
   }
-]; 
+];
 
 function ProjectPreview({ project }) {
   return (
@@ -72,7 +81,8 @@ function ProjectPreview({ project }) {
 
 export default function Projects() {
   return (
-<section id="projects" style={{ padding: '6rem 2rem', background: 'rgba(255,255,255,0.02)', position: 'relative', zIndex: 1 }}>      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+    <section id="projects" style={{ padding: '6rem 2rem', background: 'rgba(255,255,255,0.02)', position: 'relative', zIndex: 1 }}>
+      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <div style={{ fontSize: '13px', color: '#90cdf4', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Portfolio</div>
           <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: '800', letterSpacing: '-1px', marginBottom: '3rem', lineHeight: 1.2 }}>
@@ -86,7 +96,6 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
 
-              {/* Color bar */}
               <div style={{ height: '4px', background: `linear-gradient(90deg, ${p.color}, transparent)` }} />
               <ProjectPreview project={p} />
 

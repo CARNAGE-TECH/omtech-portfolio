@@ -1,32 +1,38 @@
 import { motion } from 'framer-motion';
-import { FiCode, FiLayout, FiGitBranch, FiServer } from 'react-icons/fi';
+import { FiCode, FiLayout, FiGitBranch, FiServer, FiDatabase } from 'react-icons/fi';
 
 const skillGroups = [
   {
     icon: <FiCode size={22} />,
     title: 'Languages',
-    skills: ['JavaScript (ES6+)', 'HTML5', 'CSS3']
+    skills: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3']
   },
   {
     icon: <FiLayout size={22} />,
     title: 'Frameworks & Libraries',
-    skills: ['React', 'Framer Motion', 'React Icons', 'React Router']
+    skills: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'React Router', 'React Icons']
+  },
+  {
+    icon: <FiDatabase size={22} />,
+    title: 'Backend & Database',
+    skills: ['Firebase Auth', 'Firestore', 'Cloudinary', 'EmailJS', 'localStorage']
   },
   {
     icon: <FiServer size={22} />,
-    title: 'APIs & Tools',
-    skills: ['REST APIs', 'USDA FoodData Central', 'OpenWeatherMap', 'localStorage']
+    title: 'APIs & Integrations',
+    skills: ['REST APIs', 'OpenWeatherMap API', 'USDA FoodData Central', 'Tenor GIF API']
   },
   {
     icon: <FiGitBranch size={22} />,
-    title: 'Dev Tools',
-    skills: ['Git & GitHub', 'Vercel', 'VSCode', 'npm']
+    title: 'Dev Tools & Deployment',
+    skills: ['Git & GitHub', 'Vercel', 'VSCode', 'npm', 'Vite Build']
   }
 ];
 
 export default function Skills() {
   return (
-<section id="skills" style={{ padding: '6rem 2rem', maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+    <section id="skills" style={{ padding: '6rem 2rem', maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
         <div style={{ fontSize: '13px', color: '#90cdf4', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>What I know</div>
         <h2 style={{ fontSize: 'clamp(28px, 5vw, 48px)', fontWeight: '800', letterSpacing: '-1px', marginBottom: '3rem', lineHeight: 1.2 }}>
           Skills & Technologies
